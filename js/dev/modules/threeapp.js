@@ -11,7 +11,7 @@ function init() {
     alpha: true
   });
   renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth, 300);
   renderer.autoClear = false;
   renderer.setClearColor(0x000000, 0.0);
   document.getElementById('canvas').appendChild(renderer.domElement);
@@ -19,7 +19,7 @@ function init() {
   scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0xA6CDFB, 1, 1000);
 
-  camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 1, 1000);
+  camera = new THREE.PerspectiveCamera(25, window.innerWidth / 300, 1, 1000);
   camera.position.z = 400;
   camera.position.x = 0;
   camera.position.y = 100;
@@ -35,11 +35,13 @@ function init() {
 
   var geom = new THREE.IcosahedronGeometry(15, 2);
   var mat = new THREE.MeshPhongMaterial({
-    color: 0xBD9779,
+    //color: 0xBD9779,
+    color: 0x6A83A1,
     shading: THREE.FlatShading
   });
   var bones = new THREE.MeshPhongMaterial({
-    color: 0xBD9779,
+    //color: 0xBD9779,
+    color: 0x6A83A1,
     wireframe: true,
     side: THREE.DoubleSide
   });

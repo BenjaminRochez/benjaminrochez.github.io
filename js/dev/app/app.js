@@ -18,8 +18,16 @@
   reset: false
   };
 
+  var srRevealF = {
+  easing   : 'ease-in-out',
+  scale    : 1,
+  viewFactor: 0.5,
+  reset: false
+  };
+
   window.sr = ScrollReveal();
   sr.reveal('.sr', srReveal);
+  sr.reveal('.srh', srReveal);
 
   Pace.on("done", function(){
       $(".cover").fadeOut(1000);
