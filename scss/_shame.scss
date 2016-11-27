@@ -1,0 +1,215 @@
+/*==========================================================================
+Shame
+@see http://csswizardry.com/2013/04/shame-css/
+Thanks https://github.com/heroheman/shepherd/blob/master/sass/_shame.scss
+Because hacks happen.
+
+Be very specific about what each piece of code is doing, and
+how to better fix it later
+==========================================================================*/
+
+// Try:  $ git blame _shame.scss
+
+// Rules:
+// ---------------
+//   1. If it’s a hack, it goes in _shame.scss.
+//   2. Document all hacks fully:
+//   3. What part of the codebase does it relate to?
+//   4. Why was this needed?
+//   5. How does this fix it?
+//   6. How might you fix it properly, given more time?
+//   7. Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+//   8. Try and clean _shame.scss up when you have some down time.
+
+// Example:
+// ---------------
+// Nav specificity fix.
+
+// Someone used an ID in the header code (`#header a{}`) which trumps the
+// nav selectors (`.site-nav a{}`). Use !important to override it until I
+// have time to refactor the header stuff.
+
+// .site-nav a { color:#BADA55!important; }
+
+
+// .btn{
+//// POSITION - BOXMODEL
+//
+//   display: block;
+//   height: 60px;
+//   width: 60px;
+//   position: relative;
+//   bottom: 0;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   float: ;
+//   margin: 10px;
+//   padding: 10px;
+//   vertical-align: ;
+//
+//// BACKGROUND
+//
+//   background: red;
+//   background-image: cover;
+//
+//// BORDER - BOXSHADOW
+//
+//   border: 1px solid red;
+//   border-radius: 5px;
+//   box-shadow:;
+//
+//// ANIMATION
+//
+//   transition: 1s all
+//
+//// TEXT - FONT
+//
+//   font-family: Arial;
+//   font-size: 16px;
+//   font-weight: bold;
+//   color: red;
+// }
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.resume{
+  padding: 0 25px 50px 0;
+  @media (min-width: 600px){
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 0 150px 0;
+  }
+}
+h1, h2, h3, h4{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+h1, h2{
+  text-align: center;
+}
+h1{
+  margin: 80px 0;
+
+  letter-spacing: 18px;
+  font-size: 36px;
+}
+h2{
+  margin: 80px 0;
+
+  letter-spacing: 18px;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+h3{
+  margin: 25px 0;
+
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+h4{
+  font-size: 18px;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+.resume__subtitle{
+  margin-bottom: 50px;
+
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.resume__description{
+  font-size: 18px;
+  line-height: 30px;
+}
+.resume a{
+  color: #000;
+  &:hover{
+    color: blue;
+  }
+}
+ul{
+  margin: 0;
+  padding: 0px 0 10px;
+}
+
+li{
+  list-style-type: none;
+}
+
+
+
+
+.three{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #A6CDFB;
+  background: -moz-linear-gradient(top, #BD9779 0%, #A6CDFB 100%);
+  background: -webkit-linear-gradient(top, #BD9779 0%, #A6CDFB 100%);
+  background: linear-gradient(to bottom, #BD9779 0%, #A6CDFB 100%);
+}
+.three__title{
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+  padding: 0;
+  letter-spacing: 18px;
+  font-size: 36px;
+  max-width: 600px;
+  color: #FFFFFF;
+  span{
+    letter-spacing: 4px;
+    font-size: 16px;
+    display: block;
+    margin-top: 30px;
+    line-height: 32px;
+  }
+}
+
+canvas {
+  display: block
+}
+
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #FFFFFF;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 5px;
+}
+
+.cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 9998;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "codypack",
+  "version": "0.1.0",
+  "description": "npm install --save-dev gulp coffee-script gulp-load-plugins gulp-sass gulp-size gulp-autoprefixer gulp-image-resize gulp-changed gulp-imagemin browser-sync gulp-uglify gulp-plumber gulp-rename gulp-clean-css susy breakpoint-sass",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminRochez/codypack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminRochez/codypack/issues"
+  },
+  "homepage": "https://github.com/BenjaminRochez/codypack#readme",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1",
+    "susy": "^2.2.12"
+  }
+}
